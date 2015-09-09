@@ -1,0 +1,8 @@
+<div class="top-item back-to-dashboard" ui-sref="dashboard">
+    <i class="fa fa-check-square-o"></i>
+    <span>Done</span>
+</div>
+<ul class="nav">
+    <li ui-sref="edit.views" ui-sref-active="active" ><i class="fa fa-file"></i><span>Views</span></li>
+    <li ng-repeat="item in menuItems"><i class="fa {{item.icon}}"></i><span>{{item.name}}</span></li>
+</ul>

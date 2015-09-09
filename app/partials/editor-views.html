@@ -1,0 +1,9 @@
+<div class="component-type app-view-type {{view.type}}" id="{{viewKey}}" ng-repeat="(viewKey, view) in currentAppViews">
+    <i class="fa {{view.icon}}"></i>
+    <span>{{view.title}}</span>
+    <a ui-sref="edit.view({viewId:viewKey})" class="hover-button left"><i class="fa fa-pencil"></i></a>
+    <a class="hover-button right" ng-click="deleteAppView(viewKey)"><i class="fa fa-trash-o"></i></a>
+</div>
+<div class="component-type" ng-click="createAppView()">
+    <i class="fa fa-plus-circle"></i>
+</div>

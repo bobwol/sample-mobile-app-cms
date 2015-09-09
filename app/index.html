@@ -1,0 +1,68 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>{{view.title()}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- bower -->
+    <link rel="stylesheet" href="styles/vendors.css">
+    <!-- app -->
+    <link rel="stylesheet" href="styles/interface.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="styles/medium-editor.css">
+    <link rel="stylesheet" href="styles/flat.css">
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-app="StarlingCloudInterface">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- sidenav -->
+    <nav class="side-nav side-nav-dark">
+        <div class="side-nav-view animate-fade" ui-view="sideNav"></div>
+    </nav>
+    <!-- header-bar -->
+    <div class="header-bar" role="navigation" ng-controller="HeaderBarController">
+      <div class="view-title" ui-view="headerBar">
+      </div>
+      <div class="account">
+        <img src="images/samples/profile.jpg">
+      </div>
+      <div class="global-view-settings">
+          <i class="fa fa-mobile"></i>
+          <span>iPhone 5s/5c/5</span>
+      </div>
+    </div>
+    <!-- app-view -->
+    <div class="view-container">
+        <div class="app-view animate-downwards" ui-view></div>
+    </div>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- bower -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-sanitize.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
+    <script src="scripts/angularfire.js"></script>
+    <script src="scripts/ng-resources.js"></script>
+    <script src="scripts/sortable.js"></script>
+    <script src="scripts/medium-editor.min.js"></script>
+    <script src="scripts/angular-medium-editor.min.js"></script>
+
+    <!-- app -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+</body>
+</html>

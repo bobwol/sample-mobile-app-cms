@@ -1,0 +1,13 @@
+<div class="undifined-view" ng-show="undefinedView">
+    <h3>Select a view type</h3>
+    <div class="component-type" ng-repeat="item in viewTypes" ng-show="item.icon" ng-click="setViewType()" ui-sref="edit.view({viewId:viewKey})">
+        <i class="fa {{item.icon}}"></i>
+    </div>
+</div>
+<div class="defined-view" ng-hide="undefinedView">
+    <a ui-sref="edit.views" class="button back"><i class="fa fa-check-square"></i> Done</a>
+    <div class="view-settings">
+        <input class="viewTitle" type="text" ng-model="view.title" name="viewTitle" placeholder="Title here"ng-change="updateViewTitle()">
+        <p class="viewContent" ng-model="view.content" medium-editor options='{"placeholder": [""], "buttons": ["bold", "italic", "underline", "anchor", "header1", "quote", "unorderedlist"]}'></p>
+    </div>
+</div>

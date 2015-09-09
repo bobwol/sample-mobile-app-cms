@@ -1,0 +1,15 @@
+<div class="view dashboard">
+    <!-- Apps -->
+    <div ui-sref="edit.views({appId:123})" class="app-icon">
+        <img src="images/samples/icon-af.jpg">
+    </div>
+    <div ui-sref="edit.views({appId:456})" class="app-icon">
+        <img src="images/samples/icon-tow.jpg">
+    </div>
+    <div ui-sref="edit.views({appId:appKey})" class="app-icon" id="{{appKey}}" ng-repeat="(appKey, app) in apps">
+        <img src="images/samples/icon.png">
+    </div>
+    <div class="new-app" ng-click="createNewApp()">
+        <i class="fa fa-plus"></i> Add new
+    </div>
+</div>

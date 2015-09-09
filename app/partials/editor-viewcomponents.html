@@ -1,0 +1,16 @@
+<div class="undifined-view" ng-show="undefinedView">
+    <h3>Select a view type</h3>
+    <div class="component-type" ng-repeat="item in viewTypes" ng-show="item.icon" ng-click="setViewType()" ui-sref="edit.view({viewId:viewKey})">
+        <i class="fa {{item.icon}}"></i>
+    </div>
+</div>
+<div class="defined-view" ng-hide="undefinedView">
+    <a ui-sref="edit.views" class="button back"><i class="fa fa-check-square"></i> Done</a>
+    <div class="view-settings">
+        <input type="text" placeholder="Title here">
+    </div>
+    <div class="component-type" ng-repeat="(itemKey, item) in viewComponents" data-drag="true" data-jqyoui-options="{revert: 'invalid',revertDuration: 150, helper: 'clone'}" ng-model="viewComponents" jqyoui-draggable="{index: {{$index}}, placeholder: 'keep'}">
+        
+        <i class="fa {{item.icon}}"></i>
+    </div>
+</div>
